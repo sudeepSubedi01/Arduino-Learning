@@ -15,6 +15,10 @@ String letterC_horizontal[hc] = {"11000011", "11111111"};
 
 String letterF_vertical[hc] = {"10000001","10011111"};
 String letterF_horizontal[hc] = {"00011011","11111111"};
+
+String letterI_vertical[hc] = {"10000001","11100111"};
+String letterI_horizontal[hc] = {"11000011","11111111"};
+
 void setup() {
   Serial.begin(9600);
   for (int i = 0; i < numRows; i++) {
@@ -37,8 +41,8 @@ void loop() {
     //displayLetterE();
     //delay(2000);
     //for(i=4;i<=19;i++){ digitalWrite(i,LOW);}
-    displayLetterF();
-    
+    //displayLetterF();
+    displayLetterI();
   }
 }
 
@@ -111,5 +115,24 @@ void displayLetterF() {
       }
     }
     delay(2); 
+  }
+}
+void displayLetterI(){
+  for(int i=0; i<hc ;i++){
+    for (int j=0; j<numCols ; j++){
+      if(letterI_vertical[i].charAt(j) == '0'){
+        digitalWrite(colPins[j], LOW);
+      }
+      else{
+        digitalWrite(colPins[j],HIGH);
+      }
+      if(letterI_horizontal[i].charAt(j) == '0'){
+        digitalWrite(rowPins[j], LOW);
+      }
+      else{
+        digitalWrite(rowPins[j], HIGH);
+      }
+    }
+    delay(2);
   }
 }
