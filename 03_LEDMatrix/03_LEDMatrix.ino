@@ -1,0 +1,60 @@
+const int numRows = 8;
+const int numCols = 8;
+const int hc=2;
+int rowPins[numRows] = {4,5,6,7,8, 9, 10, 11}; // Rows are connected to pins 8, 9, 10, 11, 12
+int colPins[numCols] = {12,13,A5,A4,A3,A2,A1,A0};    // Columns are connected to pins 3, 4, 5, 6, 7
+
+String letterH_vertical[hc] = {
+  	"10011001",
+    "10000001" 
+};
+
+String letterH_horizontal[hc] = {
+  "11111111",
+  "00011000"
+};
+
+String letterE_vertical[hc] = {
+  	"00111111",
+    "00000000" 
+};
+
+String letterE_horizontal[hc] = {
+  "11111111",
+  "11011011"
+};
+
+void setup() {
+  Serial.begin(9600);
+  for (int i = 0; i < numRows; i++) {
+    pinMode(rowPins[i], OUTPUT);
+  }
+  for (int j = 0; j < numCols; j++) {
+    pinMode(colPins[j], OUTPUT);
+  }
+}
+
+void loop() {
+  while (true) {
+    displayLetterH();
+  }
+}
+
+void displayLetterH() {
+  for (int i = 0; i < hc; i++) {
+    for (int j = 0; j < numCols; j++) {
+      if (letterH_vertical[i].charAt(j) == '0') {
+        
+        digitalWrite(colPins[j], LOW);
+      } else {
+        digitalWrite(colPins[j], HIGH);
+      }
+      if (letterH_horizontal[i].charAt(j) == '1') {
+        digitalWrite(rowPins[j], HIGH);
+      } else {
+        digitalWrite(rowPins[j], LOW); 
+      }
+    }
+    delay(2); 
+  }
+}
