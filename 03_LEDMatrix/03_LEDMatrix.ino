@@ -21,8 +21,8 @@ String letterE_horizontal[] = {"011111110","100000001","010000010","000110000"};
 String letterF_vertical[] = {"00111111", "11000001","11000011","10000000" };
 String letterF_horizontal[] = {"111111110", "000000010","000110000","000000001"};
 
-String letterG_vertical[] = {"11000000","11000011","10000001","00111100","11110011","00111111",""};
-String letterG_horizontal[] ={"000000001","100000000","010000010","001110000","000110000","000001100",""};
+String letterG_vertical[] = {"11000000","11000011","10000001","00111100","11110011","00111111"};
+String letterG_horizontal[] ={"000000001","100000000","010000010","001110000","000110000","000001100"};
 
 String letterH_vertical[] = {"00111100", "11000011"};
 String letterH_horizontal[] = {"111111111", "000110000"};
@@ -39,8 +39,11 @@ String letterK_horizontal[] = {"111111111","000110000","001111000","011001100","
 String letterL_vertical[] = {"00111111","11000000","11000001"};
 String letterL_horizontal[] = {"111111111","100000000","010000000"};
 
-String letterM_vertical[] = {""};
-String letterM_horizontal[] = {""};
+// String letterM_vertical[] = {"01111110","10111101","00100100","11011011"};
+// String letterM_horizontal[] = {"111111111","111111110","000011000","000000100"};
+
+String letterM_vertical[] = {"00111100","00111100","00100100","00011000","00111100","01111110"};
+String letterM_horizontal[] = {"110000000","001100000","000011000","000000100","000000010","100000001"};
 
 String letterN_vertical[] = {"00111000","00110100","00101100","00011100","00111101"};
 String letterN_horizontal[] = {"110000000","001100000","000011000","000000110","000000001"};
@@ -63,17 +66,17 @@ String letterS_horizontal[] = {"000000011","000011110","000110000","110000000","
 String letterT_vertical[] = {"10000001","00000000", "11100111"};
 String letterT_horizontal[] = {"000000001","000000010", "111111111"};
 
-String letterU_vertical[] = {"01111110","10111101","11000011","","","",""};
-String letterU_horizontal[] = {"001111111","011111111","110000000","","","","",""};
+String letterU_vertical[] = {"01111110","10111101","11000011"};
+String letterU_horizontal[] = {"001111111","011111111","110000000"};
 
-String letterV_vertical[] = {""};
-String letterV_horizontal[] = {""};
+String letterV_vertical[] = {"00111100","10111101","11011011","11100111"};
+String letterV_horizontal[] = {"000111111","001000000","010000000","100000000"};
 
-String letterW_vertical[] = {"00111100","","","","","",""};
-String letterW_horizontal[] = {"111111111","","","","","",""};
+String letterW_vertical[] = {"00111100","00111100","00100100","00011000","00111100","01111110"};
+String letterW_horizontal[] = {"000000011","000001100","000110000","001000000","010000000","100000000"};
 
-String letterX_vertical[] = {"01111110","10111101","11011011","11100111","","",""};
-String letterX_horizontal[] = {"110000011","011000110","0011011001","000111000","","",""};
+String letterX_vertical[] = {"01111110","10111101","11011011","11100111"};
+String letterX_horizontal[] = {"110000011","011000110","0011011001","000111000"};
 
 String letterY_vertical[] = {"01111110","10111101","11011011","11100111"};
 String letterY_horizontal[] = {"000000011","000000110","000001100","111111000"};
@@ -93,17 +96,17 @@ void setup() {
 }
 
 void loop() {
-  char name[] = "TUJHE NIRCHI LAGI TOH NEI KYA KARU";
-  // char name[]="Z";
-  int length = sizeof(name) / sizeof(name[0]) - 1; // Exclude null terminator
-  while (true) {
-    for (int i = 0; i < length-1; i++) {
-      load_first_letter(name[i]);
+  char name[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  // char name[] = "V";
+  int length = sizeof(name) / sizeof(name[0]) - 1; 
+  // while (true) {
+    for (int i = 0; i < length; i++) {
+      displayLetter(name[i]);
     }
-  }
+  // }
 }
 
-void load_first_letter(char letter) {
+void displayLetter(char letter) {
   String *verticalArray;
   String *horizontalArray;
   int arrayLen;
@@ -242,10 +245,6 @@ void load_first_letter(char letter) {
     default:
       return;
   }
-}
-
-void display_letter()
-
   unsigned long displayStartTime = millis();
   while (millis() - displayStartTime < 1000) {
     for (int i = 0; i < arrayLen; i++) {
@@ -264,5 +263,5 @@ void display_letter()
       delay(2); 
     }
   }
-}
 
+}
