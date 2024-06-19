@@ -6,80 +6,80 @@ int colPins[numCols] = {A0, A1, A2, A3, A4, A5, 13, 12};
 String letterA_vertical[] = {"00111100", "11000011", "11100111", "10011001", "11011011"};
 String letterA_horizontal[] = {"111111000", "000110000", "000000011", "000000100", "000000010"};
 
-String letterB_vertical[] = {""};
-String letterB_horizontal[] = {""};
+String letterB_vertical[] = {"00000011","00000001","00111100","00000001"};
+String letterB_horizontal[] = {"100000001","010000010","001101100","000010000"};
 
-String letterC_vertical[] = {"00000000", "00111111"};
-String letterC_horizontal[] = {"110000011", "111111111"};
+String letterC_vertical[] = {"11000000","10000000","00111111"};
+String letterC_horizontal[] = {"100000001","01000001","001111100"};
 
-String letterD_vertical[] = {""};
-String letterD_horizontal[] = {""};
+String letterD_vertical[] = {"00000011","00000001","10011100"};
+String letterD_horizontal[] = {"100000001","010000010","001111100"};
 
-String letterE_vertical[] = {"00111111", "00000000"};
-String letterE_horizontal[] = {"11111111", "11011011"};
+String letterE_vertical[] = {"00111111","10000000","11000001","00000011"};
+String letterE_horizontal[] = {"011111110","100000001","010000010","000110000"};
 
-String letterF_vertical[] = {"10000001", "10011111"};
-String letterF_horizontal[] = {"00011011", "11111111"};
+String letterF_vertical[] = {"00111111", "11000001","11000011","10000000" };
+String letterF_horizontal[] = {"111111110", "000000010","000110000","000000001"};
 
-String letterG_vertical[] = {""};
-String letterG_horizontal[] = {""};
+String letterG_vertical[] = {"11000000","11000011","10000001","00111100","11110011","00111111",""};
+String letterG_horizontal[] ={"000000001","100000000","010000010","001110000","000110000","000001100",""};
 
-String letterH_vertical[] = {"10011001", "10000001"};
-String letterH_horizontal[] = {"11111111", "00011000"};
+String letterH_vertical[] = {"00111100", "11000011"};
+String letterH_horizontal[] = {"111111111", "000110000"};
 
-String letterI_vertical[] = {"10000001", "11100111"};
-String letterI_horizontal[] = {"11000011", "11111111"};
+String letterI_vertical[] = {"10000001", "11100111","00000000"};
+String letterI_horizontal[] = {"100000001", "11111111","010000010"};
 
-String letterJ_vertical[] = {""};
-String letterJ_horizontal[] = {""};
+String letterJ_vertical[] = {"00000000", "11110011", "11000111", "10111111", "00111111"};
+String letterJ_horizontal[] = {"000000011", "011111100", "110000000", "010000000", "001000000"};
 
-String letterK_vertical[] = {""};
-String letterK_horizontal[] = {""};
+String letterK_vertical[] = {"00111111","11011111","11101111","11110111","11111011","11111101","11111110"};
+String letterK_horizontal[] = {"111111111","000110000","001111000","011001100","110000110","100000011","010000001"};
 
-String letterL_vertical[] = {"11000011", "11001111"};
-String letterL_horizontal[] = {"11000000", "11111111"};
+String letterL_vertical[] = {"00111111","11000000","11000001"};
+String letterL_horizontal[] = {"111111111","100000000","010000000"};
 
 String letterM_vertical[] = {""};
 String letterM_horizontal[] = {""};
 
-String letterN_vertical[] = {""};
-String letterN_horizontal[] = {""};
+String letterN_vertical[] = {"00111000","00110100","00101100","00011100","00111101"};
+String letterN_horizontal[] = {"110000000","001100000","000011000","000000110","000000001"};
 
-String letterO_vertical[] = {""};
-String letterO_horizontal[] = {""};
+String letterO_vertical[] = {"11000011","00111100","10111101"};
+String letterO_horizontal[] = {"110000011","001111100","010000010"};
 
-String letterP_vertical[] = {""};
-String letterP_horizontal[] = {""};
+String letterP_vertical[] = {"00111111","10000001","11111100"};
+String letterP_horizontal[] = {"111111110","000110011","000011111"};
 
-String letterQ_vertical[] = {""};
-String letterQ_horizontal[] = {""};
+String letterQ_vertical[] = {"11000011","00111100","10111101","11000010","00111000","00110100"};
+String letterQ_horizontal[] = {"110000011","001111100","010000010","100000000","001000000","000100000"};
 
-String letterR_vertical[] = {""};
-String letterR_horizontal[] = {""};
+String letterR_vertical[] = {"01111111","10111111","11011111","11101111","11110011","11111101","11111110"};
+String letterR_horizontal[] = {"111111110","111111111","000110011","001110011","010110011","100011110","100001100"};
 
-String letterS_vertical[] = {""};
-String letterS_horizontal[] = {""};
+String letterS_vertical[] = {"10000000","00111111","1000000","00000001","11111100"};
+String letterS_horizontal[] = {"000000011","000011110","000110000","110000000","01110000"};
 
-String letterT_vertical[] = {"10000001", "11100111"};
-String letterT_horizontal[] = {"00000011", "11111111"};
+String letterT_vertical[] = {"10000001","00000000", "11100111"};
+String letterT_horizontal[] = {"000000001","000000010", "111111111"};
 
-String letterU_vertical[] = {""};
-String letterU_horizontal[] = {""};
+String letterU_vertical[] = {"01111110","10111101","11000011","","","",""};
+String letterU_horizontal[] = {"001111111","011111111","110000000","","","","",""};
 
 String letterV_vertical[] = {""};
 String letterV_horizontal[] = {""};
 
-String letterW_vertical[] = {""};
-String letterW_horizontal[] = {""};
+String letterW_vertical[] = {"00111100","","","","","",""};
+String letterW_horizontal[] = {"111111111","","","","","",""};
 
-String letterX_vertical[] = {""};
-String letterX_horizontal[] = {""};
+String letterX_vertical[] = {"01111110","10111101","11011011","11100111","","",""};
+String letterX_horizontal[] = {"110000011","011000110","0011011001","000111000","","",""};
 
-String letterY_vertical[] = {""};
-String letterY_horizontal[] = {""};
+String letterY_vertical[] = {"01111110","10111101","11011011","11100111"};
+String letterY_horizontal[] = {"000000011","000000110","000001100","111111000"};
 
-String letterZ_vertical[] = {"00000000", "10011111", "11001111", "11100111", "11110011", "111110011"};
-String letterZ_horizontal[] = {"110000011", "00100000", "00010000", "00001000", "00000100", "000000100"};
+String letterZ_vertical[] = {"01111110","10011111","11001111","11100111", "11110011", "11111001"};
+String letterZ_horizontal[] = {"110000011","111000011","110100011","110010011", "110001011", "110000111"};
 
 void setup() {
   Serial.begin(9600);
@@ -93,16 +93,17 @@ void setup() {
 }
 
 void loop() {
-  char name[] = "A";
+  char name[] = "TUJHE NIRCHI LAGI TOH NEI KYA KARU";
+  // char name[]="Z";
   int length = sizeof(name) / sizeof(name[0]) - 1; // Exclude null terminator
   while (true) {
-    for (int i = 0; i < length; i++) {
-      displayLetter(name[i]);
+    for (int i = 0; i < length-1; i++) {
+      load_first_letter(name[i]);
     }
   }
 }
 
-void displayLetter(char letter) {
+void load_first_letter(char letter) {
   String *verticalArray;
   String *horizontalArray;
   int arrayLen;
@@ -241,9 +242,12 @@ void displayLetter(char letter) {
     default:
       return;
   }
+}
+
+void display_letter()
 
   unsigned long displayStartTime = millis();
-  while (millis() - displayStartTime < 1000) {  // Refresh for 1 second
+  while (millis() - displayStartTime < 1000) {
     for (int i = 0; i < arrayLen; i++) {
       for (int j = 0; j < numRows; j++) {
         if (verticalArray[i].charAt(j) == '0') {
@@ -257,7 +261,8 @@ void displayLetter(char letter) {
           digitalWrite(rowPins[j], LOW);
         }
       }
-      delay(2);  // Brief delay to allow the display to update
+      delay(2); 
     }
   }
 }
+
