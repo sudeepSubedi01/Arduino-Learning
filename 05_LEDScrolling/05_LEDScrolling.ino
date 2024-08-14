@@ -81,6 +81,36 @@ String letterY_horizontal[] = {"000000011","000000110","000001100","111111000"};
 String letterZ_vertical[] = {"01111110","10011111","11001111","11100111", "11110011", "11111001"};
 String letterZ_horizontal[] = {"110000011","111000011","110100011","110010011", "110001011", "110000111"};
 
+String letter0_vertical[] = {"10011001","10000001","11000011"};
+String letter0_horizontal[] = {"001111100","010000010","100000001"};
+
+String letter1_vertical[] = {"00000000","11100111","00100111","10000111","11000111"};
+String letter1_horizontal[] = {"110000000","001110001","000001000","000000100","000000010"};
+
+String letter2_vertical[] = {"11111101","11111011","11110111","11101111","11011111","10111111"};
+String letter2_horizontal[] = {"110001110","110011111","110110011","111100011","111000111","110000110"}; 
+
+String letter3_vertical[] = {"11000011","10000001","11111001","11110011","10011111"};
+String letter3_horizontal[] = {"100000001","010000010","001101100","000010000","001000100"};
+
+String letter4_vertical[] = {"11111001","11000001","10000001","10011111"};
+String letter4_horizontal[] = {"111001111","000100000","000010000","000001111"};
+
+String letter5_vertical[] = {"10000111","10000001","11111101","11111011","10011111"};
+String letter5_horizontal[] = {"110011000","000000011","011110000","111111000","000000100"};
+
+String letter6_vertical[] = {"11000011","11111101","11111011","11011111","10111111"};
+String letter6_horizontal[] = {"110110011","011100110","001000100","001001100","011111110"};
+
+String letter7_vertical[] = {"00000011","11111100","11111001","11110011","11100111","11001111","10011111","00111111"};
+String letter7_horizontal[] = {"000000011","000000111","000001000","000010000","000100000","001000000","010000000","100000000"};
+
+String letter8_vertical[] = {"11000011","10000001","10011001"};
+String letter8_horizontal[] = {"100010001","010001010","001100100"};
+
+String letter9_vertical[] = {"11000011","10000001","10011111","11111001","11000001"};
+String letter9_horizontal[] = {"100000001","010001010","001000100","001100100","000010000"};
+
 class LEDMatrix {
   int* rowPins;
   int* colPins;
@@ -235,6 +265,56 @@ public:
         horizontalArray = letterZ_horizontal;
         arrayLen = sizeof(letterZ_vertical) / sizeof(letterZ_vertical[0]);
         break;
+      case '0':
+        verticalArray = letter0_vertical;
+        horizontalArray = letter0_horizontal;
+        arrayLen = sizeof(letter0_vertical) / sizeof(letter0_vertical[0]);
+        break;
+      case '1':
+        verticalArray = letter1_vertical;
+        horizontalArray = letter1_horizontal;
+        arrayLen = sizeof(letter1_vertical) / sizeof(letter1_vertical[0]);
+        break;
+      case '2':
+        verticalArray = letter2_vertical;
+        horizontalArray = letter2_horizontal;
+        arrayLen = sizeof(letter2_vertical) / sizeof(letter2_vertical[0]);
+        break;
+      case '3':
+        verticalArray = letter3_vertical;
+        horizontalArray = letter3_horizontal;
+        arrayLen = sizeof(letter3_vertical) / sizeof(letter3_vertical[0]);
+        break;
+      case '4':
+        verticalArray = letter4_vertical;
+        horizontalArray = letter4_horizontal;
+        arrayLen = sizeof(letter4_vertical) / sizeof(letter4_vertical[0]);
+        break;
+      case '5':
+        verticalArray = letter5_vertical;
+        horizontalArray = letter5_horizontal;
+        arrayLen = sizeof(letter5_vertical) / sizeof(letter5_vertical[0]);
+        break;
+      case '6':
+        verticalArray = letter6_vertical;
+        horizontalArray = letter6_horizontal;
+        arrayLen = sizeof(letter6_vertical) / sizeof(letter6_vertical[0]);
+        break;
+      case '7':
+        verticalArray = letter7_vertical;
+        horizontalArray = letter7_horizontal;
+        arrayLen = sizeof(letter7_vertical) / sizeof(letter7_vertical[0]);
+        break;
+      case '8':
+        verticalArray = letter8_vertical;
+        horizontalArray = letter8_horizontal;
+        arrayLen = sizeof(letter8_vertical) / sizeof(letter8_vertical[0]);
+        break;
+      case '9':
+        verticalArray = letter9_vertical;
+        horizontalArray = letter9_horizontal;
+        arrayLen = sizeof(letter9_vertical) / sizeof(letter9_vertical[0]);
+        break;
       default:
         return;
     }
@@ -333,8 +413,14 @@ void reset()
 void loop()
 {
   char name[]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  int nameLength=sizeof(name)/sizeof(name[0])-1;
-  for(int i=0;i<nameLength-1;i++)
+  int nameSize = sizeof(name)/sizeof(name[0])-1;
+  for (int i = nameSize ; i > 0 ; i--){
+    name[i]=name[i-1];
+  }
+  name[nameSize+1]='\0';
+  name[0]=' ';
+  
+  for(int i=0;i<nameSize-1;i++)
   {
     ledMatrix1.loadLetter(name[i]);
     ledMatrix2.loadLetter(name[i+1]);
